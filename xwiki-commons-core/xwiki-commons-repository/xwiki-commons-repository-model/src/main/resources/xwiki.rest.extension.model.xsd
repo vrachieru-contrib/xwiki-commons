@@ -68,6 +68,14 @@
   <element name="extensionVersion" type="extension:ExtensionVersion"></element>
 
 
+  <complexType name="ExtensionRating">
+    <sequence>
+      <element name="totalVotes" type="int" maxOccurs="1" minOccurs="1"></element>
+      <element name="averageVote" type="float" maxOccurs="1" minOccurs="1"></element>
+    </sequence>
+  </complexType>
+
+
   <complexType name="ExtensionSummary">
     <complexContent>
       <extension base="extension:LinkCollection">
@@ -75,6 +83,7 @@
           <element name="id" type="string"></element>
           <element name="name" type="string"></element>
           <element name="type" type="string"></element>
+          <element name="rating" type="extension:ExtensionRating"></element>
         </sequence>
       </extension>
     </complexContent>
